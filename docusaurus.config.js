@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
 	title: "Hosting Guide",
 	tagline: "Host your own website on the internet!",
-	url: "https://your-docusaurus-test-site.com",
+	url: "https://hosting_guide.aninternettroll.xyz",
 	baseUrl: "/",
 	onBrokenLinks: "throw",
 	onBrokenMarkdownLinks: "warn",
@@ -47,10 +47,10 @@ const config = {
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
 			navbar: {
-				title: "My Site",
+				title: "Hosting site",
 				logo: {
-					alt: "My Site Logo",
-					src: "img/logo.svg",
+					alt: "An Internet Troll's profile pic",
+					src: "https://github.com/identicons/aninternettroll.png",
 				},
 				items: [
 					{

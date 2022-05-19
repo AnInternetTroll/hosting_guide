@@ -4,6 +4,9 @@ import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
+import GitHubMark from "@site/static/img/GitHub-Mark-120px-plus.png";
+import GitHubMarkLight from "@site/static/img/GitHub-Mark-Light-120px-plus.png";
+import { useColorMode } from "@docusaurus/theme-common";
 
 function HomepageHeader() {
 	const { siteConfig } = useDocusaurusContext();
@@ -33,9 +36,56 @@ export default function Home(): JSX.Element {
 			description={siteConfig.tagline}
 		>
 			<HomepageHeader />
-			<main>
-				<h1>Hello, world</h1>
-			</main>
+			<Main />
 		</Layout>
 	);
+}
+
+function Main(): JSX.Element {
+	const { colorMode } = useColorMode();
+	return (
+		<main>
+			<h1>Host your own website on</h1>
+			<div
+				style={{
+					display: "flex",
+					flexDirection: "row",
+					marginLeft: "auto",
+					marginRight: "auto",
+					maxWidth: "700px",
+				}}
+			>
+				{(
+					[
+						{
+							name: "GitHub",
+							description: "Where the world builds software",
+							logo: colorMode === "dark" ? GitHubMarkLight : GitHubMark,
+							link: "/docs/github_pages/create_a_repo",
+						},
+					] as IProvider[]
+				).map((provider) => (
+					<Provider {...provider} />
+				))}
+			</div>
+		</main>
+	);
+}
+
+function Provider({ name, logo, description, link }: IProvider) {
+	return (
+		<div style={{ flex: "auto", maxWidth: "200px", display: "inline" }}>
+			<img src={logo} />
+			<h1>
+				<Link to={link}>{name}</Link>
+			</h1>
+			<p>{description}</p>
+		</div>
+	);
+}
+interface IProvider {
+	name: string;
+	logo: string;
+	description: string;
+	link: string;
 }

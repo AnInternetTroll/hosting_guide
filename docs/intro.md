@@ -4,7 +4,9 @@ sidebar_position: 1
 
 # Introduction
 
-In this tutorial we will leanr how to deploy a website.
+Everyone wants to host their website to show if off to the world.
+
+In the following tutorial you will learn how to host your website completely free!
 
 ## Pre-requisites
 
