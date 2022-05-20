@@ -12,7 +12,7 @@ const config = {
 	baseUrl: "/",
 	onBrokenLinks: "throw",
 	onBrokenMarkdownLinks: "warn",
-	favicon: "img/favicon.ico",
+	favicon: "https://identicons.github.com/aninternettroll.png",
 
 	// GitHub pages deployment config.
 	// If you aren't using GitHub pages, you don't need these.
@@ -83,7 +83,7 @@ const config = {
 						items: [
 							{
 								label: "GitHub",
-								href: "https://github.com/facebook/docusaurus",
+								href: "https://github.com/aninternettroll",
 							},
 						],
 					},

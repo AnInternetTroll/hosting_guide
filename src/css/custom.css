@@ -6,15 +6,22 @@
 	--ifm-color-primary-light: #383838;
 	--ifm-color-primary-lighter: #3b3b3b;
 	--ifm-color-primary-lightest: #424242;
+	--ifm-footer-background-color: #424242
+	--ifm-link-color: #0d6efd;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-	--ifm-color-primary: #666666;
+	--ifm-color-primary: #bcbcbc;
 	--ifm-color-primary-dark: #5c5c5c;
 	--ifm-color-primary-darker: #575757;
 	--ifm-color-primary-darkest: #474747;
 	--ifm-color-primary-light: #707070;
 	--ifm-color-primary-lighter: #757575;
-	--ifm-color-primary-lightest: #858585;
+	--ifm-color-primary-lightest: #656464;
+	--ifm-link-color: #5d9dfc;
+}
+
+footer {
+	text-align: center;
 }

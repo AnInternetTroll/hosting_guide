@@ -4,7 +4,9 @@ import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
+// @ts-ignore PNGs don't have types
 import GitHubMark from "@site/static/img/GitHub-Mark-120px-plus.png";
+// @ts-ignore Same thing here
 import GitHubMarkLight from "@site/static/img/GitHub-Mark-Light-120px-plus.png";
 import { useColorMode } from "@docusaurus/theme-common";
 
@@ -49,10 +51,11 @@ function Main(): JSX.Element {
 			<div
 				style={{
 					display: "flex",
+					justifyContent: "center",
 					flexDirection: "row",
 					marginLeft: "auto",
 					marginRight: "auto",
-					maxWidth: "700px",
+					//maxWidth: "700px",
 				}}
 			>
 				{(
@@ -74,7 +77,7 @@ function Main(): JSX.Element {
 
 function Provider({ name, logo, description, link }: IProvider) {
 	return (
-		<div style={{ flex: "auto", maxWidth: "200px", display: "inline" }}>
+		<div style={{ flex: "auto", maxWidth: "200px", display: "inline", textAlign: "center" }}>
 			<img src={logo} />
 			<h1>
 				<Link to={link}>{name}</Link>
